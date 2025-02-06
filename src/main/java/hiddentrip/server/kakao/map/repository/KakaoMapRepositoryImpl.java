@@ -19,11 +19,6 @@ public class KakaoMapRepositoryImpl implements KakaoMapRepository {
 	private final EntityManager entityManager;
 
 	@Override
-	public KakaoMapEntity save(KakaoMapEntity kakaoMapEntity) {
-		return kakaoMapJpaRepository.save(kakaoMapEntity);
-	}
-
-	@Override
 	@Transactional
 	public void bulkInsert(List<KakaoMapEntity> kakaoMapEntities) {
 		int batchSize = 1000;
